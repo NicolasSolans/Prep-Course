@@ -49,7 +49,7 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
-  array.unshift("elemento");
+  array.unshift(elemento);
   return array
 }
 
@@ -68,12 +68,10 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
-for( var i = 0; i < array.length; i++) {
-  if(array[i] === elemento) {
+  if(array.includes(elemento)){
     return true;
   }
-} 
-return false 
+  return false
 
 }
 
@@ -184,8 +182,6 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-
-  
 }
 
 
