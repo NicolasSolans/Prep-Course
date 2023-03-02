@@ -34,7 +34,7 @@ function agregarMetodoPrototype(Constructor) {
   // Tu código:
 
   Constructor.prototype.saludar = function(){
-    return "Hello Word";
+    return "Hello World!";
   }
 }
 

@@ -4,24 +4,46 @@ function mayuscula(nombre) {
   //La función recibe un nombre y debe devolver el mismo que recibe pero con su primer letra en mayúscula
   //ej: Recibe "mario" ----> Devuelve "Mario"
   //Tu código:
-}
+
+    var nombre = "mario"
+    var nombreSeparado = nombre.split("");
+    nombreSeparado.shift();
+    nombreSeparado.unshift("M");
+
+    return nombreSeparado;
+ }
+
+
+console.log(mayuscula("nico"));
 
 function invocarCallback(cb) {
   // Invoca al callback `cb`
   //Tu código:
+  cb();
 }
 
 function operacionMatematica(n1, n2, cb) {
   //Vamos a recibir una función que realiza una operación matemática como callback junto con dos números.
   //Devolver el callback pasándole como argumentos los números recibidos.
   //Tu código:
+  return cb(n1, n2)
 }
 
 function sumarArray(numeros, cb) {
   // Suma todos los números enteros (int/integers) de un array ("numeros")
   // Pasa el resultado a `cb`
   // No es necesario devolver nada
-  //Tu código:
+  //Tu código: 
+
+  var suma = 0
+
+  for(var i = 0; i < numeros.length; i++){
+    
+    suma = suma + numeros[i];
+    
+  }
+  
+  cb(suma);
 }
 
 function forEach(array, cb) {
