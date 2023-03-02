@@ -10,11 +10,11 @@ function mayuscula(nombre) {
     nombreSeparado.shift();
     nombreSeparado.unshift("M");
 
-    return nombreSeparado;
+    var nombreMayuscula = nombreSeparado.join("");
+
+    return nombreMayuscula;
  }
 
-
-console.log(mayuscula("nico"));
 
 function invocarCallback(cb) {
   // Invoca al callback `cb`
@@ -37,7 +37,7 @@ function sumarArray(numeros, cb) {
 
   var suma = 0
 
-  for(var i = 0; i < numeros.length; i++){
+   for(var i = 0; i < numeros.length; i++){
     
     suma = suma + numeros[i];
     
@@ -50,19 +50,37 @@ function forEach(array, cb) {
   // Itera sobre la matriz "array" y pasa los valores al callback uno por uno
   // Pista: Estarás invocando a `cb` varias veces (una por cada valor en la matriz)
   //Tu código:
-}
+  array.forEach(function(acc, i){
+    cb(acc)
+  })
+
+
+  }
+
 
 function map(array, cb) {
   // Crea un nuevo array
   // Itera sobre cada valor en "array", pásalo a `cb` y luego ubicar el valor devuelto por `cb` en un nuevo array
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
+  var array2 = array.map(function(elemento){
+    return cb(elemento)
+  })
+   return array2; 
 }
 
 function filter(array) {
   //Filtrar todos los elementos del array que comiencen con la letra "a".
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
+  nuevoArray = []
+
+  for(var i = 0; i < array.length; i++){
+    if(array[i] === "Alejo"){
+      nuevoArray.push(array[i])
+    }
+     return nuevoArray
+  }
 }
 
 // No modificar nada debajo de esta línea
