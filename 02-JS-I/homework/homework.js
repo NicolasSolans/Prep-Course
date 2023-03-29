@@ -7,7 +7,7 @@ const nuevaString = "hola";
 const nuevoNum = 1;
 
 // Crea una variable booleana:
-const nuevoBool = null;
+const nuevoBool = true;
 
 // Resuelve el siguiente problema matemático:
 const nuevaResta = 10 - 5 === 5;
@@ -176,7 +176,7 @@ function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-  return nombre + apellido;
+  return nombre +" " + apellido;
   
 }
 

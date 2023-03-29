@@ -39,7 +39,7 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-  array.push("elemento");
+  array.push(elemento);
   return array;
 }
 
@@ -168,11 +168,11 @@ function diaDeLaSemana(numeroDeDia) {
   }
 
   if(numeroDeDia === 1 || numeroDeDia === 7){
-    return "es fin de semana"
+    return "Es fin de semana"
   }
   else{
     
-    return "dia laboral"
+    return "Es dia Laboral"
   } 
   
 } 
@@ -182,6 +182,12 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
+  var numeroAString = n.toString()
+
+  if(numeroAString.charAt(0) === "9"){
+    return true;
+  }
+  return false;
 }
 
 
@@ -273,21 +279,25 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
-  array2 = []
-  var suma = numero
-
-  for(var i = 0; i < 11; i++)
-  if(i === 5){
-    continue; 
-  }
-  else{
-    suma = suma + 2;
-    array2.push(suma); 
+  
+    var nuevosValores = [];
+    var nuevoValor = numero;
+  
+    for (var i = 0; i < 10; i++) {
+      if (i === 5) {
+        continue;
+      }
+      else {
+        nuevoValor += 2;
+        nuevosValores.push(nuevoValor);
+      }
+    }
+  
+    return nuevosValores;
   }
   
-  return array2;
 
-}
+
 
 
 // No modificar nada debajo de esta línea

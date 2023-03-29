@@ -5,14 +5,10 @@ function mayuscula(nombre) {
   //ej: Recibe "mario" ----> Devuelve "Mario"
   //Tu código:
 
-    var nombre = "mario"
-    var nombreSeparado = nombre.split("");
-    nombreSeparado.shift();
-    nombreSeparado.unshift("M");
+    var primerLetra = nombre.charAt(0).toUpperCase();
+    var nombreMayuscula = nombre.slice(1);
 
-    var nombreMayuscula = nombreSeparado.join("");
-
-    return nombreMayuscula;
+    return primerLetra + nombreMayuscula;
  }
 
 
@@ -73,13 +69,13 @@ function filter(array) {
   //Filtrar todos los elementos del array que comiencen con la letra "a".
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
-  nuevoArray = []
+  nuevoArray = [];
 
   for(var i = 0; i < array.length; i++){
-    if(array[i] === "Alejo"){
+    if(array[i].charAt(0) === "a"){
       nuevoArray.push(array[i])
     }
-     return nuevoArray
+     return nuevoArray;
   }
 }
 

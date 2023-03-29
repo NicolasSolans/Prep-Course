@@ -40,8 +40,8 @@ function multiplicarNumeroDesconocidoPorCinco (objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-  objetoMisterioso.numeroMisterioso * 5;
-  return objetoMisterioso;
+  return objetoMisterioso.numeroMisterioso * 5;
+  
 
 }
 
@@ -71,7 +71,7 @@ function tieneEmail (usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(usuario[email]){
+  if(usuario["email"]){
     return true;
   }
   return false
@@ -95,12 +95,11 @@ function verificarPassword (usuario, password) {
   // Devuelve "true" si coinciden
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(usuario[password] == password){
+  if(usuario["password"] == password){
     return true;
   }
-  else{
-    return false
-  }
+  
+  return false; 
 }
 
 function actualizarPassword (usuario, nuevaPassword) {
@@ -142,7 +141,7 @@ function sumarLikesDeUsuario (usuario) {
   // Tu código:
   suma = 0
 
-  for(var i = 0; usuario.posts.length; i++){
+  for(var i = 0; i < usuario.posts.length; i++){
     suma = suma + usuario.posts[i].likes;
 
   }
