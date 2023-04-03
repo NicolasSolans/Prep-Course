@@ -75,8 +75,9 @@ function filter(array) {
     if(array[i].charAt(0) === "a"){
       nuevoArray.push(array[i])
     }
-     return nuevoArray;
+     
   }
+  return nuevoArray;
 }
 
 // No modificar nada debajo de esta línea

@@ -37,8 +37,10 @@ function saludo(idioma) {
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
   if(idioma == "aleman") return "Guten Tag!"
-  if(idioma == "mandarin") return "Ni Hao"
-  if(idioma == "ingles") return "Hello"
+  if(idioma == "mandarin") return "Ni Hao!"
+  if(idioma == "ingles") return "Hello!"
+
+  return "Hola!"
 }
 
 function colors(color) {
@@ -91,8 +93,11 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-  if(numero % 2 == 0) return true
-  return false
+  if(Math.floor(numero) === numero){ 
+    return true};
+
+ 
+    return false;
 }
 
 function fizzBuzz(numero) {
@@ -126,7 +131,7 @@ function operadoresLogicos(num1, num2, num3) {
     return "Hay negativos"
   }
   if(num1 > num2 && num1 > num3 && num1 > 0) {
-    return "Numero 1 es mayor y positivo"
+    return "Número 1 es mayor y positivo"
   }
   else if(num1 === 0 || num2 === 0 || num3 === 0) {
     return "Error"
@@ -165,7 +170,7 @@ function esVerdadero(valor){
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
   if(valor === true) {
-    return "Soy Verdadero"
+    return "Soy verdadero"
   }
   else{
     return "Soy falso"
@@ -182,6 +187,7 @@ function tablaDelSeis(){
   for(var i = 0; i <= 10; i++) {
     tablaDelSeis.push(6 * i)
   }
+  return tablaDelSeis;
 }
 
 function tieneTresDigitos(numero){
@@ -198,6 +204,14 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  var i = 0
+  do{
+    i = i + 1 
+    numero = numero + 5
+  }
+  while (i < 8)
+
+  return numero;
 }
 
 
